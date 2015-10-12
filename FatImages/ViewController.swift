@@ -8,6 +8,14 @@
 
 import UIKit
 
+
+enum Stooges : String{
+    case curly = "http://bit.ly/1GEKeOj"
+    case larry = "http://bit.ly/1WYdxEN"
+    case moe   = "http://bit.ly/1jtfJWa"
+}
+
+
 class ViewController: UIViewController {
 
     //MARK: IBOutlets
