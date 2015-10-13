@@ -9,10 +9,20 @@
 import UIKit
 
 
-enum Stooges : String{
-    case curly = "http://bit.ly/1GEKeOj"
-    case larry = "http://bit.ly/1WYdxEN"
-    case moe   = "http://bit.ly/1jtfJWa"
+// Wondering why we only use https connections?
+// It's because of a new iOS feature called App Transport Security.
+// From now on, Apps can only access resources through a secure
+// connection, using https. You can easily change this default
+// behavior. Check this article to find out how:
+// http://www.neglectedpotential.com/2015/06/working-with-apples-application-transport-security/
+// OTOH, if you have no idea what the difference between an http and
+// https connection is, fear not! Everything will be explained in the
+// networking section.
+// At this point it's not relevant.
+enum BigImages: String{
+    case sharkAttack = "https://lh3.googleusercontent.com/ZGuyQQYYhQM0rOVNGjUwKSAui0FSzqto3CLFPsqxmtcIAhiAcxmtHpF3I_To7k3aGI8Yz1Gijj4g4Aot075Q=s0#w=5100&h=3839"
+    case shark = "https://lh3.googleusercontent.com/BCoVLCGTcWErtKbD9Nx7vNKlQ0R3RDsBpOa8iA70mGW2XcC76jKS09pDX_Rad6rjyXQCxngEYi3Sy3uJgd99=s0#w=4713&h=3846"
+    case seaLion   = "https://lh3.googleusercontent.com/ibcT9pm_NEdh9jDiKnq0NGuV2yrl5UkVxu-7LbhMjnzhD84mC6hfaNlb-Ht0phXKH4TtLxi12zheyNEezA=s0#w=4626&h=3701"
 }
 
 
@@ -20,13 +30,16 @@ class ViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var photoView: UIImageView!
-    
+
     //MARK: Actions
     
     // This method downloads a huge image, blocking the main queue and
     // the UI.
     // This si for instructional purposes only, never do this.
     @IBAction func synchronousDownload(sender: UIBarButtonItem) {
+        
+        
+        
     }
     
     

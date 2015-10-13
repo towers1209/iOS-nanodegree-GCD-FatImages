@@ -21,13 +21,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <animations/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Th-rq-mHe">
-                                <rect key="frame" x="18" y="285" width="564" height="31"/>
-                                <animations/>
-                                <connections>
-                                    <action selector="setTransparencyOfImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="ywb-49-cy2"/>
-                                </connections>
-                            </slider>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEp-3O-n88">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <animations/>
@@ -51,20 +44,27 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Th-rq-mHe">
+                                <rect key="frame" x="18" y="285" width="564" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="setTransparencyOfImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="ywb-49-cy2"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gEp-3O-n88" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2DK-tM-7Zm"/>
-                            <constraint firstItem="gEp-3O-n88" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DSR-Th-nFN"/>
-                            <constraint firstItem="5Th-rq-mHe" firstAttribute="centerX" secondItem="gEp-3O-n88" secondAttribute="centerX" id="Gx7-1j-XIe"/>
-                            <constraint firstItem="5Th-rq-mHe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ILa-z5-DSv"/>
-                            <constraint firstAttribute="trailing" secondItem="fR8-Y5-Kl9" secondAttribute="trailing" id="J6E-ee-6PA"/>
-                            <constraint firstItem="fR8-Y5-Kl9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pfr-WX-C8d"/>
-                            <constraint firstItem="gEp-3O-n88" firstAttribute="leading" secondItem="fR8-Y5-Kl9" secondAttribute="leading" id="RqR-j3-YFA"/>
-                            <constraint firstItem="gEp-3O-n88" firstAttribute="trailing" secondItem="fR8-Y5-Kl9" secondAttribute="trailing" id="bBr-am-6d1"/>
-                            <constraint firstItem="5Th-rq-mHe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="owD-vd-7Hb"/>
-                            <constraint firstItem="gEp-3O-n88" firstAttribute="top" secondItem="fR8-Y5-Kl9" secondAttribute="bottom" id="skc-gu-6xo"/>
+                            <constraint firstItem="gEp-3O-n88" firstAttribute="top" secondItem="fR8-Y5-Kl9" secondAttribute="bottom" id="0zO-kd-0zs"/>
+                            <constraint firstItem="fR8-Y5-Kl9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3z6-wX-bB5"/>
+                            <constraint firstItem="fR8-Y5-Kl9" firstAttribute="trailing" secondItem="gEp-3O-n88" secondAttribute="trailing" id="8P9-8b-jaz"/>
+                            <constraint firstItem="5Th-rq-mHe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hlt-QY-sd4"/>
+                            <constraint firstItem="fR8-Y5-Kl9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="POx-6f-abq"/>
+                            <constraint firstAttribute="trailing" secondItem="fR8-Y5-Kl9" secondAttribute="trailing" id="PUL-wW-Zp3"/>
+                            <constraint firstItem="5Th-rq-mHe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U4H-E9-8NK"/>
+                            <constraint firstItem="gEp-3O-n88" firstAttribute="centerX" secondItem="5Th-rq-mHe" secondAttribute="centerX" id="gI9-J5-Zix"/>
+                            <constraint firstItem="gEp-3O-n88" firstAttribute="leading" secondItem="fR8-Y5-Kl9" secondAttribute="leading" id="l1O-ND-fnv"/>
+                            <constraint firstItem="gEp-3O-n88" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="y7R-oo-mae"/>
                         </constraints>
                     </view>
                     <connections>
