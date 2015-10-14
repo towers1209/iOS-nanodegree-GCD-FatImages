@@ -108,8 +108,10 @@ class ViewController: UIViewController {
                 let img = UIImage(data: imgData){
                     
                     // run the completion block
-                    handler(image: img)
-            }
+                    // always in the main queue, just in case!
+                    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
+                        handler(image: img)
+                    })            }
         }
     }
     
