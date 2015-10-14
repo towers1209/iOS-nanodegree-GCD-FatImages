@@ -39,16 +39,16 @@ class ViewController: UIViewController {
     @IBAction func synchronousDownload(sender: UIBarButtonItem) {
         
         // Get the URL for the image
-        let url = NSURL(string: BigImages.seaLion.rawValue)
-        
         // Obtain the NSData with the image
-        let imgData = NSData(contentsOfURL: url!)
-        
         // Turn it into a UIImage
-        let image = UIImage(data: imgData!)
-        
-        // Display it
-        photoView.image = image
+        if let url = NSURL(string: BigImages.seaLion.rawValue),
+            let imgData = NSData(contentsOfURL: url),
+            let image = UIImage(data: imgData){
+                
+                // Display it
+                photoView.image = image
+        }
+
 
         
     }
