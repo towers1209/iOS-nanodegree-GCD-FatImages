@@ -85,6 +85,32 @@ class ViewController: UIViewController {
     // This code downloads the huge image in a global queue and uses a completion
     // closure.
     @IBAction func asynchronousDownload(sender: UIBarButtonItem) {
+        
+        withBigImage { (image) -> Void in
+            // Display it
+            self.photoView.image = image
+        }
+    }
+    
+    // This method downloads and image in the background once it's
+    // finished, it runs the closure it receives as a parameter.
+    // This closure is called a completion handler
+    // Go download the image, and once you're done, do _this_ (the completion handler)
+    func withBigImage(completionHandler handler: (image: UIImage) -> Void){
+        
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { () -> Void in
+            
+            // get the url
+            // get the NSData
+            // turn it into a UIImage
+            if let url = NSURL(string: BigImages.whale.rawValue),
+                let imgData = NSData(contentsOfURL: url),
+                let img = UIImage(data: imgData){
+                    
+                    // run the completion block
+                    handler(image: img)
+            }
+        }
     }
     
     
