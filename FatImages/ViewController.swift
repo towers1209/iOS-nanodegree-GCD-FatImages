@@ -44,21 +44,29 @@ class ViewController: UIViewController {
         
         // start animation
         activityView.startAnimating()
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1), dispatch_get_main_queue()) { () -> Void in
+            // Get the URL for the image
+            // Obtain the NSData with the image
+            // Turn it into a UIImage
+            if let url = NSURL(string: BigImages.seaLion.rawValue),
+                let imgData = NSData(contentsOfURL: url),
+                let image = UIImage(data: imgData){
+                    
+                    // Display it
+                    self.photoView.image = image
+                    
+                    // Stop animating
+                    self.activityView.stopAnimating()
+            }
 
-        // Get the URL for the image
-        // Obtain the NSData with the image
-        // Turn it into a UIImage
-        if let url = NSURL(string: BigImages.seaLion.rawValue),
-            let imgData = NSData(contentsOfURL: url),
-            let image = UIImage(data: imgData){
-                
-                // Display it
-                photoView.image = image
         }
+        
+        
+        
+        
 
-
-        // Stop animating
-        self.activityView.stopAnimating()
+        
         
     }
     
