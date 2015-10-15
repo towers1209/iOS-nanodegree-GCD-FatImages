@@ -51,12 +51,18 @@
                                     <action selector="setTransparencyOfImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="ywb-49-cy2"/>
                                 </connections>
                             </slider>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8SH-Jk-Cgx">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <animations/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gEp-3O-n88" firstAttribute="top" secondItem="fR8-Y5-Kl9" secondAttribute="bottom" id="0zO-kd-0zs"/>
                             <constraint firstItem="fR8-Y5-Kl9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3z6-wX-bB5"/>
+                            <constraint firstItem="8SH-Jk-Cgx" firstAttribute="centerY" secondItem="5Th-rq-mHe" secondAttribute="centerY" id="7bN-X6-wbV"/>
                             <constraint firstItem="fR8-Y5-Kl9" firstAttribute="trailing" secondItem="gEp-3O-n88" secondAttribute="trailing" id="8P9-8b-jaz"/>
                             <constraint firstItem="5Th-rq-mHe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hlt-QY-sd4"/>
                             <constraint firstItem="fR8-Y5-Kl9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="POx-6f-abq"/>
@@ -64,16 +70,18 @@
                             <constraint firstItem="5Th-rq-mHe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U4H-E9-8NK"/>
                             <constraint firstItem="gEp-3O-n88" firstAttribute="centerX" secondItem="5Th-rq-mHe" secondAttribute="centerX" id="gI9-J5-Zix"/>
                             <constraint firstItem="gEp-3O-n88" firstAttribute="leading" secondItem="fR8-Y5-Kl9" secondAttribute="leading" id="l1O-ND-fnv"/>
+                            <constraint firstItem="8SH-Jk-Cgx" firstAttribute="centerX" secondItem="5Th-rq-mHe" secondAttribute="centerX" id="uiK-2C-TKn"/>
                             <constraint firstItem="gEp-3O-n88" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="y7R-oo-mae"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityView" destination="8SH-Jk-Cgx" id="uJ6-Y2-hcD"/>
                         <outlet property="photoView" destination="fR8-Y5-Kl9" id="kDB-Zt-0LB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="487"/>
+            <point key="canvasLocation" x="-8" y="490"/>
         </scene>
     </scenes>
 </document>

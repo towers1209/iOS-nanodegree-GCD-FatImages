@@ -30,6 +30,7 @@ class ViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
 
     //MARK: Actions
     
