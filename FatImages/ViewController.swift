@@ -39,6 +39,12 @@ class ViewController: UIViewController {
     // This si for instructional purposes only, never do this.
     @IBAction func synchronousDownload(sender: UIBarButtonItem) {
         
+        // hide current image
+        photoView.image = nil
+        
+        // start animation
+        activityView.startAnimating()
+
         // Get the URL for the image
         // Obtain the NSData with the image
         // Turn it into a UIImage
@@ -51,6 +57,8 @@ class ViewController: UIViewController {
         }
 
 
+        // Stop animating
+        self.activityView.stopAnimating()
         
     }
     
@@ -58,6 +66,13 @@ class ViewController: UIViewController {
     // This method avoids blocking by creating a new queue that runs
     // in the background, without blocking the UI.
     @IBAction func simpleAsynchronousDownload(sender: UIBarButtonItem) {
+        
+        // hide current image
+        photoView.image = nil
+        
+        // start animation
+        activityView.startAnimating()
+        
         
         // Get the URL for the image
         let url = NSURL(string: BigImages.shark.rawValue)
@@ -78,6 +93,9 @@ class ViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 // Display it
                 self.photoView.image = image
+                
+                // Stop animating
+                self.activityView.stopAnimating()
             })
         }
 
@@ -87,9 +105,18 @@ class ViewController: UIViewController {
     // closure.
     @IBAction func asynchronousDownload(sender: UIBarButtonItem) {
         
+        // hide current image
+        photoView.image = nil
+        
+        // start animation
+        activityView.startAnimating()
+        
         withBigImage { (image) -> Void in
             // Display it
             self.photoView.image = image
+            
+            // Stop animating
+            self.activityView.stopAnimating()
         }
     }
     
@@ -98,6 +125,8 @@ class ViewController: UIViewController {
     // This closure is called a completion handler
     // Go download the image, and once you're done, do _this_ (the completion handler)
     func withBigImage(completionHandler handler: (image: UIImage) -> Void){
+        
+
         
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { () -> Void in
             
@@ -112,7 +141,10 @@ class ViewController: UIViewController {
                     // always in the main queue, just in case!
                     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
                         handler(image: img)
-                    })            }
+                        
+                        
+                    })
+            }
         }
     }
     
