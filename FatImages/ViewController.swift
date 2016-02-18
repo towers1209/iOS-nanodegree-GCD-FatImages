@@ -5,6 +5,11 @@
 //  Created by Fernando Rodriguez on 10/12/15.
 //  Copyright © 2015 Udacity. All rights reserved.
 //
+/*
+  Branch Step1 code
+  Initial state of code used in
+  Lesson 3: Putting it all Together > Synchronous Download
+*/
 
 import UIKit
 
