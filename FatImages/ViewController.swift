@@ -5,6 +5,11 @@
 //  Created by Fernando Rodriguez on 10/12/15.
 //  Copyright © 2015 Udacity. All rights reserved.
 //
+/*
+    Branch Step2.1 code
+    Code for SynchronousDownload refactored using a let statement construct in
+    Lesson 3: Putting it all Together > An asynchronous Method
+*/
 
 import UIKit
 
