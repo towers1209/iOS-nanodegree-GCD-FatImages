@@ -5,6 +5,12 @@
 //  Created by Fernando Rodriguez on 10/12/15.
 //  Copyright © 2015 Udacity. All rights reserved.
 //
+/*
+    Branch Step4.1 code
+    Code for AsynchronousDownload and withBigImage. withBigImage updated with
+    code so that the completion handler executes in the main queue as discussed in
+    Lesson 3: Putting it all Together > Completion Closure
+*/
 
 import UIKit
 
@@ -109,9 +115,10 @@ class ViewController: UIViewController {
                     
                     // run the completion block
                     // always in the main queue, just in case!
-                    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
+                    dispatch_async(dispatch_get_main_queue())  { () -> Void in
                         handler(image: img)
-                    })            }
+                    }
+            }
         }
     }
     
